@@ -2,8 +2,8 @@ Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
 ## Mijn spel: *naam van het spel*
 Gemaakt door:
-- *naam van leerling 1*
-- *naam van leerling 2*
+- *Renske Hartman *
+- *Dylan van der leij*
 
 ## Mijn planning
 
@@ -11,19 +11,21 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [ ] teken speler
 - [ ] beweeg speler
-- [ ] ... *(vul zelf aan)*
+- [ ] teken voorwerp voor punten (munten)
+- [ ] teken grond (waar je wel op kunt staan)
+- [ ] ...........................
 - [ ] punten op scherm zetten
-- [ ] punten kunnen scoren
+- [ ] punten kunnen scoren 
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+- [ ] tegenstanders in de vorm van poppetjes
+- [ ] tegenstanders in de vorm van obstekels
 - [ ] *later uitwerken*
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
-- [ ] *later uitwerken*
-- [ ] *later uitwerken*
+- [ ] teken extra voorwerpen die bij ons thema passen
+- [ ] bewegende achtergrond
 - [ ] *later uitwerken*
 
 ## Credits
