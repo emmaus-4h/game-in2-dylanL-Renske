@@ -12,7 +12,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] teken speler
 - [ ] beweeg speler ( links, rechts, omhoog, omlaag )
 - [ ] teken voorwerp voor punten (munten)
-- [ ] game over na 60 sec
+- [ ] game over na 60 seconden
 
 - [ ] teken grond (waar je wel op kunt staan)
 - [ ] ...........................
