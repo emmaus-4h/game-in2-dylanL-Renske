@@ -10,8 +10,10 @@ Gemaakt door:
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [ ] teken speler
-- [ ] beweeg speler
+- [ ] beweeg speler ( links, rechts, omhoog, omlaag )
 - [ ] teken voorwerp voor punten (munten)
+- [ ] game over na 60 sec
+
 - [ ] teken grond (waar je wel op kunt staan)
 - [ ] ...........................
 - [ ] punten op scherm zetten
@@ -19,7 +21,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] tegenstanders in de vorm van poppetjes
+- [ ] tegenstanders in de vorm van poppetjes (of)
 - [ ] tegenstanders in de vorm van obstekels
 - [ ] *later uitwerken*
 
