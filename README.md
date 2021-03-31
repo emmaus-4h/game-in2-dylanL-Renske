@@ -11,19 +11,22 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [ ] teken speler
 - [ ] beweeg speler ( links, rechts, omhoog, omlaag )
-- [ ] teken voorwerp voor punten (munten)
+- [ ] dat bepaalde punt tekenen als bijvoorbeeld fisish
+- [ ] game gewonnen als eindpunt gehaald
 - [ ] game over na 60 seconden
+- [ ] level gewonnen als je einde haald ( bepaald punt )
 
 - [ ] teken grond (waar je wel op kunt staan)
-- [ ] ...........................
+
 - [ ] punten op scherm zetten
+- [ ] teken voorwerp voor punten (munten)
 - [ ] punten kunnen scoren 
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] tegenstanders in de vorm van poppetjes (of)
 - [ ] tegenstanders in de vorm van obstekels
-- [ ] *later uitwerken*
+- [ ] game over als speler vijand raakt
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
 - [ ] teken extra voorwerpen die bij ons thema passen
