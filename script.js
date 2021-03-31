@@ -31,6 +31,9 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 0;   // x-positie van vijand
 var vijandY = 0;   // y-positie van vijand
 
+var muntX = 300;    // x-positie van munt
+var muntY = 200;    // y-positie van munt
+
 var score = 0; // aantal behaalde punten
 
 
@@ -46,7 +49,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("purple");
+  fill("#008080");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -58,7 +61,7 @@ var tekenVeld = function () {
  */
 var tekenVijand = function(x, y) {
     
-
+ 
 };
 
 
@@ -80,7 +83,25 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 50, 50);
+  ellipse(x, y, 65, 65);
+fill("black");
+  ellipse(x-10, y, 10, 10);
+  ellipse(x+10, y, 10, 10);
+  ellipse(x, y+20, 22, 2);
+
+  
+};
+
+/**
+ * Tekent de munt
+ * @param {number} x x-coördinaat
+ * @param {number} y y-coördinaat
+ */
+var tekenMunt = function(x, y) {
+
+fill("yellow");
+  ellipse(x, y, 40, 40);
+
 };
 
 
@@ -110,6 +131,15 @@ var beweegSpeler = function() {
 
 
 /**
+ * Updatet globale variabelen met positie van kogel of bal
+ */
+var beweegMunt = function() {
+
+};
+
+
+
+/**
  * Zoekt uit of de vijand is geraakt
  * @returns {boolean} true als vijand is geraakt
  */
@@ -136,6 +166,8 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
+
+
   return false;
 };
 

@@ -19,8 +19,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [ ] teken grond (waar je wel op kunt staan)
 
 - [ ] punten op scherm zetten
-- [ ] teken voorwerp voor punten (munten)
-- [ ] punten kunnen scoren 
+- [ ] teken munten
+- [ ] punten kunnen scoren door het pakken van munten 
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
