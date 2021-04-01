@@ -71,8 +71,10 @@ var tekenVijand = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenKogel = function(x, y) {
-
-
+fill("yellow");
+  ellipse(x+400, y+100, 32, 32);
+  fill("yellow")
+ellipse(x+400, y+100, 20, 20)
 };
 
 
@@ -83,11 +85,13 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 65, 65);
+  ellipse(x, y, 30, 30);
+   
 fill("black");
-  ellipse(x-10, y, 10, 10);
-  ellipse(x+10, y, 10, 10);
-  ellipse(x, y+20, 22, 2);
+  ellipse(x-10, y, 5, 5);
+  ellipse(x+10, y, 5, 5);
+  ellipse(x, y+8, 22, 2);
+ 
 
   
 };
@@ -100,7 +104,7 @@ fill("black");
 var tekenMunt = function(x, y) {
 
 fill("yellow");
-  ellipse(x, y, 40, 40);
+  ellipse(x, y, 100, 40);
 
 };
 
@@ -182,7 +186,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('black');
 }
 
 
