@@ -49,7 +49,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("#008080");
+  fill("yellow");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -84,16 +84,59 @@ ellipse(x+400, y+100, 20, 20)
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  fill("white");
-  ellipse(x, y, 30, 30);
-   
-fill("black");
-  ellipse(x-10, y, 5, 5);
-  ellipse(x+10, y, 5, 5);
-  ellipse(x, y+8, 22, 2);
  
 
+ 
+    
+//rij 1
+fill("black")
+rect(100,100, 5,5)
+rect(110,100, 5,5)
+rect(115,100, 5,5)
+rect(120,100, 5,5)
+rect(130,100, 5,5)
+
+//rij 2
+rect(105,105, 5,5)
+rect(125,105, 5,5)
+rect(115,105, 5,5)
+//rij 3
+rect(110,110, 5,5)
+rect(120,110, 5,5)
+
+//rij 4
+rect(110,115, 5,5)
+rect(105,115, 5,5)
+rect(115,115, 5,5)
+rect(120,115, 5,5)
+rect(125,115, 5,5)
+
+//rij 5
+rect(100,120, 5,5)
+rect(115,120, 5,5)
+rect(130,120, 5,5)
+
+//rij 6
+rect(100,125, 5,5)
+rect(110,125, 5,5)
+rect(120,125, 5,5)
+rect(130,125, 5,5)
+
+//rij 7
+rect(110,130, 5,5)
+rect(120,130, 5,5)
+
+//rij 8
+rect(110,135, 5,5)
+rect(120,135, 5,5)
+
+fill("white")
+rect(110,105, 5,5)
+rect(120,105, 5,5)
   
+fill("pink") 
+
+rect(115,110, 5,5)
 };
 
 /**
