@@ -31,9 +31,6 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 0;   // x-positie van vijand
 var vijandY = 0;   // y-positie van vijand
 
-var muntX = 300;    // x-positie van munt
-var muntY = 200;    // y-positie van munt
-
 var score = 0; // aantal behaalde punten
 
 
@@ -49,8 +46,9 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("yellow");
+  fill("#82FA58");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+
 };
 
 
@@ -72,9 +70,9 @@ var tekenVijand = function(x, y) {
  */
 var tekenKogel = function(x, y) {
 fill("yellow");
-  ellipse(x+400, y+100, 32, 32);
+  ellipse(x+400, y+100, 30, 30);
   fill("yellow")
-ellipse(x+400, y+100, 20, 20)
+ellipse(x+400, y+100, 18, 18)
 };
 
 
@@ -85,9 +83,6 @@ ellipse(x+400, y+100, 20, 20)
  */
 var tekenSpeler = function(x, y) {
  
-
- 
-    
 //rij 1
 fill("black")
 rect(100,100, 5,5)
@@ -100,6 +95,7 @@ rect(130,100, 5,5)
 rect(105,105, 5,5)
 rect(125,105, 5,5)
 rect(115,105, 5,5)
+
 //rij 3
 rect(110,110, 5,5)
 rect(120,110, 5,5)
@@ -135,21 +131,9 @@ rect(110,105, 5,5)
 rect(120,105, 5,5)
   
 fill("pink") 
-
 rect(115,110, 5,5)
 };
 
-/**
- * Tekent de munt
- * @param {number} x x-coördinaat
- * @param {number} y y-coördinaat
- */
-var tekenMunt = function(x, y) {
-
-fill("yellow");
-  ellipse(x, y, 100, 40);
-
-};
 
 
 /**
@@ -173,6 +157,8 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
+
+
 
 };
 

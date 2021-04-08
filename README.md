@@ -2,21 +2,23 @@ Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
 ## Mijn spel: *naam van het spel*
 Gemaakt door:
-- *Renske Hartman *
+- *Renske Hartman*
 - *Dylan van der leij*
 
 ## Mijn planning
 
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
-- [ ] teken speler
+- [x] teken speler
 - [ ] beweeg speler ( links, rechts, omhoog, omlaag )
+
+- [ ] teken grond (waar je wel op kunt staan)
 - [ ] dat bepaalde punt tekenen als bijvoorbeeld fisish
 - [ ] game gewonnen als eindpunt gehaald
 - [ ] game over na 60 seconden
 - [ ] level gewonnen als je einde haald ( bepaald punt )
 
-- [ ] teken grond (waar je wel op kunt staan)
+
 
 - [ ] punten op scherm zetten
 - [ ] teken munten
