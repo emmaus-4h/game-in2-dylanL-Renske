@@ -33,10 +33,7 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-//var KEY_LEFT = 37;
-//var KEY_RIGHT = 39;
-//var key_up = 38;
-//var key_down = 40;
+
 
 
 
@@ -49,12 +46,17 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("#82FA58");
+  fill("#DDA0DD"); 
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 
+fill("#8eee7f");
+rect(20, 620, 1240, 75);
+
+fill("#9f6060");
+rect(20, 640, 1240, 60);
 };
 
-
+//width - 2 * 20, height - 2 *20
 /**
  * Tekent de vijand
  * @param {number} x x-coördinaat
@@ -163,22 +165,22 @@ var beweegSpeler = function() {
 
 
 if (keyIsDown(LEFT_ARROW)) {
-    spelerX = spelerX - 2;
+    spelerX = spelerX - 4 ;
 }
 
 
  if (keyIsDown(RIGHT_ARROW)) {
-    spelerX = spelerX + 2;
+    spelerX = spelerX + 4;
   }
 
 
  if (keyIsDown(DOWN_ARROW)) {
-    spelerY = spelerY - 2;
+    spelerY = spelerY +4;
   }
 
 
  if (keyIsDown(UP_ARROW)) {
-    spelerY = spelerY + 2;
+    spelerY = spelerY - 4;
   }
 };
 
