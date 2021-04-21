@@ -88,53 +88,53 @@ var tekenSpeler = function(x, y) {
  
 //rij 1
 fill("black")
-rect(100,100, 5,5)
-rect(110,100, 5,5)
-rect(115,100, 5,5)
-rect(120,100, 5,5)
-rect(130,100, 5,5)
+rect(x,y, 5,5)
+rect(x+10,y, 5,5)
+rect(x+15,y, 5,5)
+rect(x+20,y, 5,5)
+rect(x+30,y, 5,5)
 
 //rij 2
-rect(105,105, 5,5)
-rect(125,105, 5,5)
-rect(115,105, 5,5)
+rect(x+5,y+5, 5,5)
+rect(x+25,y+5, 5,5)
+rect(x+15,y+5, 5,5)
 
 //rij 3
-rect(110,110, 5,5)
-rect(120,110, 5,5)
+rect(x+10,y+10, 5,5)
+rect(x+20,y+10, 5,5)
 
 //rij 4
-rect(110,115, 5,5)
-rect(105,115, 5,5)
-rect(115,115, 5,5)
-rect(120,115, 5,5)
-rect(125,115, 5,5)
+rect(x+10,y+15, 5,5)
+rect(x+5,y+15, 5,5)
+rect(x+15,y+15, 5,5)
+rect(x+20,y+15, 5,5)
+rect(x+25,y+15, 5,5)
 
 //rij 5
-rect(100,120, 5,5)
-rect(115,120, 5,5)
-rect(130,120, 5,5)
+rect(x,y+20, 5,5)
+rect(x+15,y+20, 5,5)
+rect(x+30,y+20, 5,5)
 
 //rij 6
-rect(100,125, 5,5)
-rect(110,125, 5,5)
-rect(120,125, 5,5)
-rect(130,125, 5,5)
+rect(x,y+25, 5,5)
+rect(x+10,y+25, 5,5)
+rect(x+20,y+25, 5,5)
+rect(x+30,y+25, 5,5)
 
 //rij 7
-rect(110,130, 5,5)
-rect(120,130, 5,5)
+rect(x+10,y+30, 5,5)
+rect(x+20,y+30, 5,5)
 
 //rij 8
-rect(110,135, 5,5)
-rect(120,135, 5,5)
+rect(x+10,y+35, 5,5)
+rect(x+20,y+35, 5,5)
 
 fill("white")
-rect(110,105, 5,5)
-rect(120,105, 5,5)
+rect(x+10,y+5, 5,5)
+rect(x+20,y+5, 5,5)
   
 fill("pink") 
-rect(115,110, 5,5)
+rect(x+15,y+10, 5,5)
 };
 
 
@@ -161,15 +161,25 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
 
+
 if (keyIsDown(LEFT_ARROW)) {
-    x = x - 2;
+    spelerX = spelerX - 2;
 }
+
 
  if (keyIsDown(RIGHT_ARROW)) {
     spelerX = spelerX + 2;
   }
 
 
+ if (keyIsDown(DOWN_ARROW)) {
+    spelerY = spelerY - 2;
+  }
+
+
+ if (keyIsDown(UP_ARROW)) {
+    spelerY = spelerY + 2;
+  }
 };
 
 
