@@ -33,8 +33,8 @@ var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var KEY_LEFT = 37;
-var KEY_RIGHT = 39;
+//var KEY_LEFT = 37;
+//var KEY_RIGHT = 39;
 //var key_up = 38;
 //var key_down = 40;
 
@@ -159,21 +159,20 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
-
-var KEY_LEFT = 37;
-var KEY_RIGHT = 39;
-
 var beweegSpeler = function() {
 
-if (keyIsDown(KEY_LEFT)) {
+if (keyIsDown(LEFT_ARROW)) {
     x = x - 2;
 }
 
- if (keyIsDown(KEY_RIGHT)) {
-    x = x + 2;
+ if (keyIsDown(RIGHT_ARROW)) {
+    spelerX = spelerX + 2;
   }
 
+
 };
+
+
 
 /**
  * Updatet globale variabelen met positie van kogel of bal
