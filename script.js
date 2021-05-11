@@ -23,7 +23,7 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 var spelerX = 200; // x-positie van speler
-var spelerY = 100; // y-positie van speler
+var spelerY = 580; // y-positie van speler
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
@@ -168,18 +168,15 @@ if (keyIsDown(LEFT_ARROW)) {
     spelerX = spelerX - 4 ;
 }
 
-
- if (keyIsDown(RIGHT_ARROW)) {
+if (keyIsDown(RIGHT_ARROW)) {
     spelerX = spelerX + 4;
   }
 
-
- if (keyIsDown(DOWN_ARROW)) {
+if (keyIsDown(DOWN_ARROW)) {
     spelerY = spelerY +4;
   }
 
-
- if (keyIsDown(UP_ARROW)) {
+if (keyIsDown(UP_ARROW)) {
     spelerY = spelerY - 4;
   }
 };

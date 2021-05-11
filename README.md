@@ -10,7 +10,7 @@ Gemaakt door:
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [x] teken speler
-- [ ] beweeg speler ( links, rechts, omhoog, omlaag )
+- [x] beweeg speler ( links, rechts, omhoog, omlaag )
 
 - [ ] teken grond (waar je wel op kunt staan)
 - [ ] dat bepaalde punt tekenen als bijvoorbeeld fisish
