@@ -300,6 +300,10 @@ var checkGameOver = function() {
 
 if (spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659){
 
+
+fill("green");
+rect(20, 20, 1240, 680);
+
 fill("black");
 textSize(100);
 text('GAME OVER', 350, 400);
