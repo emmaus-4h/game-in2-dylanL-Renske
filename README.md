@@ -11,6 +11,13 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [x] teken speler
 - [x] beweeg speler ( links, rechts, omhoog, omlaag )
+- [x] einde scherm aangeven
+- [x] teken vijand
+- [ ] vijand laten bewegen
+- [ ] achtergrond maken
+
+
+
 
 - [ ] teken grond (waar je wel op kunt staan)
 - [ ] dat bepaalde punt tekenen als bijvoorbeeld fisish

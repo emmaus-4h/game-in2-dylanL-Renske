@@ -28,8 +28,8 @@ var spelerY = 580; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 100;   // x-positie van vijand
-var vijandY = 100;   // y-positie van vijand
+var vijandX = 150;   // x-positie van vijand
+var vijandY = 150;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -51,6 +51,9 @@ var tekenVeld = function () {
 
 fill("#8eee7f");
 rect(20, 620, 1240, 75);
+
+fill("white");
+rect(50, 50, 150, 50);
 
 fill("#9f6060");
 rect(20, 640, 1240, 60);
@@ -222,7 +225,7 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
 
-if ( spelerX > 20 && spelerY > 20 && spelerX < 1220 && spelerY < 660 )
+if ( spelerX > 20 && spelerY > 20 && spelerX < 1220 && spelerY < 660)
 //if ( spelerX < 100 && spelerY < 100 )
 {
 
@@ -260,6 +263,8 @@ var beweegMunt = function() {
  */
 var checkVijandGeraakt = function() {
 
+
+
   return false;
 };
 
@@ -270,10 +275,14 @@ var checkVijandGeraakt = function() {
  * @returns {boolean} true als speler is geraakt
  */
 var checkSpelerGeraakt = function() {
-    
+
+    //if (spelerX = vijandX ) {
+//result ='true';
+//} 
+
   return false;
 };
-
+//&& spelerY = vijandY 
 
 /**
  * Zoekt uit of het spel is afgelopen
@@ -281,7 +290,11 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
+if (spelerX < 20 || spelerY < 20 || spelerX > 1220 || spelerY > 660){
 
+text('GAMEOVER', 200, 200);
+
+}
 
   return false;
 };
