@@ -22,14 +22,14 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 200; // x-positie van speler
+var spelerX = 800; // x-positie van speler
 var spelerY = 580; // y-positie van speler
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 150;   // x-positie van vijand
-var vijandY = 150;   // y-positie van vijand
+var vijandX = 350;   // x-positie van vijand
+var vijandY = 350;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -290,11 +290,19 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
+//if ( spelerY=vijandY ) {
+
+//fill("black");
+//textSize(100);
+//text('TOUCH ENEMY GAMEOVER', 400, 350);
+
+
+
 if (spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659){
 
 fill("black");
 textSize(100);
-text('GAMEOVER', 400, 350);
+text('GAME OVER', 350, 400);
 
 }
 
