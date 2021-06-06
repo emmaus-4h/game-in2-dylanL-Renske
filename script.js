@@ -290,7 +290,7 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
-//if ( spelerY=vijandY ) {
+//if ( spelerY=vijandY && spelerX=spelerY) {
 
 //fill("black");
 //textSize(100);
@@ -301,7 +301,7 @@ var checkGameOver = function() {
 if (spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659){
 
 
-fill("green");
+fill("#87CEFA");
 rect(20, 20, 1240, 680);
 
 fill("black");
