@@ -53,7 +53,7 @@ fill("#8eee7f");
 rect(20, 620, 1240, 75);
 
 fill("white");
-rect(50, 50, 150, 50);
+rect(50, 50, 250, 50);
 
 fill("#9f6060");
 rect(20, 640, 1240, 60);
@@ -226,7 +226,7 @@ var beweegKogel = function() {
 var beweegSpeler = function() {
 
 if ( spelerX > 20 && spelerY > 20 && spelerX < 1220 && spelerY < 660)
-//if ( spelerX < 100 && spelerY < 100 )
+
 {
 
 if (keyIsDown(LEFT_ARROW)) {
@@ -290,9 +290,11 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
-if (spelerX < 20 || spelerY < 20 || spelerX > 1220 || spelerY > 660){
+if (spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659){
 
-text('GAMEOVER', 200, 200);
+fill("black");
+textSize(100);
+text('GAMEOVER', 400, 350);
 
 }
 
