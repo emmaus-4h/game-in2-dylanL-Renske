@@ -191,18 +191,21 @@ rect(x+15,y+10, 5,5)
 };
 
 
+//startscherm
+
+
+
+
+// beweging 
 
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegVijand = function() {
-    
-if (){
 
 
 
 }    
-};
 
 
 /**
@@ -219,6 +222,9 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
 
+if ( spelerX > 20 && spelerY > 20 && spelerX < 1220 && spelerY < 660 )
+//if ( spelerX < 100 && spelerY < 100 )
+{
 
 if (keyIsDown(LEFT_ARROW)) {
     spelerX = spelerX - 4 ;
@@ -234,7 +240,7 @@ if (keyIsDown(DOWN_ARROW)) {
 
 if (keyIsDown(UP_ARROW)) {
     spelerY = spelerY - 4;
-  }
+  }}
 };
 
 
