@@ -269,11 +269,11 @@ vijandY = vijandY + random(15) + random(-15)
 };    
 
 var beweegFijand = function() {
-
+ 
 fijandX = fijandX + random(15) + random(-15)
 fijandY = fijandY + random(15) + random(-15)
+}; 
 
-};
 
 /**
  * Updatet globale variabelen met positie van kogel of bal
@@ -353,7 +353,7 @@ var checkGameOver = function() {
 
 
 //speler raakt rand scherm
-if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 )) {
+if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 20 && spelerY - vijandY > -20 && spelerX - vijandX < 20 && spelerX - vijandX > -20 )) {
 
 spelerX = spelerX - 1000
 fill("#87CEFA");
