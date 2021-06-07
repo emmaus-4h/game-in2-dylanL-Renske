@@ -31,6 +31,10 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 350;   // x-positie van vijand
 var vijandY = 350;   // y-positie van vijand
 
+var fijandX = 400;   // x-positie van vijand
+var fijandY = 400;   // y-positie van vijand
+
+
 var score = 0; // aantal behaalde punten
 
 
@@ -66,6 +70,60 @@ rect(20, 640, 1240, 60);
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
+    
+//rij 1
+fill("red")
+rect(x,y, 5,5)
+rect(x+10,y, 5,5)
+rect(x+15,y, 5,5)
+rect(x+20,y, 5,5)
+rect(x+30,y, 5,5)
+
+//rij 2
+rect(x+5,y+5, 5,5)
+rect(x+25,y+5, 5,5)
+rect(x+15,y+5, 5,5)
+
+//rij 3
+rect(x+10,y+10, 5,5)
+rect(x+20,y+10, 5,5)
+
+//rij 4
+rect(x+10,y+15, 5,5)
+rect(x+5,y+15, 5,5)
+rect(x+15,y+15, 5,5)
+rect(x+20,y+15, 5,5)
+rect(x+25,y+15, 5,5)
+
+//rij 5
+rect(x,y+20, 5,5)
+rect(x+15,y+20, 5,5)
+rect(x+30,y+20, 5,5)
+
+//rij 6
+rect(x,y+25, 5,5)
+rect(x+10,y+25, 5,5)
+rect(x+20,y+25, 5,5)
+rect(x+30,y+25, 5,5)
+
+//rij 7
+rect(x+10,y+30, 5,5)
+rect(x+20,y+30, 5,5)
+
+//rij 8
+rect(x+10,y+35, 5,5)
+rect(x+20,y+35, 5,5)
+
+fill("white")
+rect(x+10,y+5, 5,5)
+rect(x+20,y+5, 5,5)
+  
+fill("pink") 
+rect(x+15,y+10, 5,5)
+};
+ 
+
+var tekenFijand = function(x, y) {
     
 //rij 1
 fill("red")
@@ -206,9 +264,16 @@ rect(x+15,y+10, 5,5)
  */
 var beweegVijand = function() {
 
-
+vijandX = vijandX + random(15) + random(-15)
+vijandY = vijandY + random(15) + random(-15)
 };    
 
+var beweegFijand = function() {
+
+fijandX = fijandX + random(15) + random(-15)
+fijandY = fijandY + random(15) + random(-15)
+
+};
 
 /**
  * Updatet globale variabelen met positie van kogel of bal
@@ -263,32 +328,14 @@ var beweegMunt = function() {
 var checkVijandGeraakt = function() {
 
 
-
-
-
- //if (spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 ) {
-
-//fill("#87CEFA");
-//rect(20, 20, 1240, 680);
-
-
-//fill("black");
-//textSize(100);
-//text('GAME OVER', 350, 400);
-
-//}
-
-
-  //return false;
 };
 
 
 var checkSpelerGeraakt = function() {
 
-
  
 };
-//(spelerY - vijandY < 50 && spelerY - vijandY < -50 && spelerX - vijandX < 50 && spelerX - vijandX < -50 )
+
 /**
  * Zoekt uit of de speler is geraakt
  * bijvoorbeeld door botsing met vijand
@@ -303,19 +350,6 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
-
-//if (spelerY > 300) {
-
-//fill("#87CEFA");
-//rect(20, 20, 1240, 680);
-
-//fill("black");
-//textSize(100);
-//text('GAME OVER', 350, 400);
-
-//}
- 
- // return false;
 
 
 //speler raakt rand scherm
@@ -361,6 +395,7 @@ function draw() {
   switch (spelStatus) {
     case SPELEN:
       beweegVijand();
+      beweegFijand();
       beweegKogel();
       beweegSpeler();
       
@@ -376,6 +411,7 @@ function draw() {
 
       tekenVeld();
       tekenVijand(vijandX, vijandY);
+      tekenFijand(fijandX, fijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
