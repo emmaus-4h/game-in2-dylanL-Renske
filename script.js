@@ -207,8 +207,7 @@ rect(x+15,y+10, 5,5)
 var beweegVijand = function() {
 
 
-
-}    
+};    
 
 
 /**
@@ -265,24 +264,38 @@ var checkVijandGeraakt = function() {
 
 
 
-  return false;
+
+
+ //if (spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 ) {
+
+//fill("#87CEFA");
+//rect(20, 20, 1240, 680);
+
+
+//fill("black");
+//textSize(100);
+//text('GAME OVER', 350, 400);
+
+//}
+
+
+  //return false;
 };
 
 
+var checkSpelerGeraakt = function() {
+
+
+ 
+};
+//(spelerY - vijandY < 50 && spelerY - vijandY < -50 && spelerX - vijandX < 50 && spelerX - vijandX < -50 )
 /**
  * Zoekt uit of de speler is geraakt
  * bijvoorbeeld door botsing met vijand
  * @returns {boolean} true als speler is geraakt
  */
-var checkSpelerGeraakt = function() {
 
-    //if (spelerX = vijandX ) {
-//result ='true';
-//} 
 
-  return false;
-};
-//&& spelerY = vijandY 
 
 /**
  * Zoekt uit of het spel is afgelopen
@@ -290,15 +303,23 @@ var checkSpelerGeraakt = function() {
  */
 var checkGameOver = function() {
     
-//if ( spelerY=vijandY && spelerX=spelerY) {
+
+//if (spelerY > 300) {
+
+//fill("#87CEFA");
+//rect(20, 20, 1240, 680);
 
 //fill("black");
 //textSize(100);
-//text('TOUCH ENEMY GAMEOVER', 400, 350);
+//text('GAME OVER', 350, 400);
+
+//}
+ 
+ // return false;
 
 
-
-if (spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659){
+//speler raakt rand scherm
+if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 )) {
 
 
 fill("#87CEFA");
@@ -309,10 +330,25 @@ textSize(100);
 text('GAME OVER', 350, 400);
 
 }
-
   return false;
 };
 
+/**if (spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 ) {
+
+fill("#87CEFA");
+rect(20, 20, 1240, 680);
+
+
+fill("black");
+textSize(100);
+text('GAME OVER', 350, 400);
+
+}
+
+
+  return false;
+};
+ 
 
 /**
  * setup
