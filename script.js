@@ -321,7 +321,7 @@ var checkGameOver = function() {
 //speler raakt rand scherm
 if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 )) {
 
-
+spelerX = spelerX - 1000
 fill("#87CEFA");
 rect(20, 20, 1240, 680);
 
@@ -333,21 +333,9 @@ text('GAME OVER', 350, 400);
   return false;
 };
 
-/**if (spelerY - vijandY < 50 && spelerY - vijandY > -50 && spelerX - vijandX < 50 && spelerX - vijandX > -50 ) {
-
-fill("#87CEFA");
-rect(20, 20, 1240, 680);
 
 
-fill("black");
-textSize(100);
-text('GAME OVER', 350, 400);
 
-}
-
-
-  return false;
-};
  
 
 /**
