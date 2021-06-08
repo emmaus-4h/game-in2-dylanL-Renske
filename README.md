@@ -13,7 +13,7 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] beweeg speler ( links, rechts, omhoog, omlaag )
 - [x] einde scherm aangeven
 - [x] teken vijand
-- [ ] vijand laten bewegen
+- [x] vijand laten bewegen
 - [ ] achtergrond maken
 
 

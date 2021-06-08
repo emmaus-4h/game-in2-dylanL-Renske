@@ -35,6 +35,11 @@ var fijandX = 400;   // x-positie van vijand
 var fijandY = 400;   // y-positie van vijand
 
 
+var tijandX = 550;   // x-positie van vijand
+var tijandY = 550;   // y-positie van vijand
+
+
+
 var score = 0; // aantal behaalde punten
 
 
@@ -177,6 +182,59 @@ rect(x+15,y+10, 5,5)
 };
  
 
+var tekenTijand = function(x, y) {
+    
+//rij 1
+fill("red")
+rect(x,y, 5,5)
+rect(x+10,y, 5,5)
+rect(x+15,y, 5,5)
+rect(x+20,y, 5,5)
+rect(x+30,y, 5,5)
+
+//rij 2
+rect(x+5,y+5, 5,5)
+rect(x+25,y+5, 5,5)
+rect(x+15,y+5, 5,5)
+
+//rij 3
+rect(x+10,y+10, 5,5)
+rect(x+20,y+10, 5,5)
+
+//rij 4
+rect(x+10,y+15, 5,5)
+rect(x+5,y+15, 5,5)
+rect(x+15,y+15, 5,5)
+rect(x+20,y+15, 5,5)
+rect(x+25,y+15, 5,5)
+
+//rij 5
+rect(x,y+20, 5,5)
+rect(x+15,y+20, 5,5)
+rect(x+30,y+20, 5,5)
+
+//rij 6
+rect(x,y+25, 5,5)
+rect(x+10,y+25, 5,5)
+rect(x+20,y+25, 5,5)
+rect(x+30,y+25, 5,5)
+
+//rij 7
+rect(x+10,y+30, 5,5)
+rect(x+20,y+30, 5,5)
+
+//rij 8
+rect(x+10,y+35, 5,5)
+rect(x+20,y+35, 5,5)
+
+fill("white")
+rect(x+10,y+5, 5,5)
+rect(x+20,y+5, 5,5)
+  
+fill("pink") 
+rect(x+15,y+10, 5,5)
+};
+ 
 
 
 
@@ -274,6 +332,11 @@ fijandX = fijandX + random(15) + random(-15)
 fijandY = fijandY + random(15) + random(-15)
 }; 
 
+var beweegTijand = function() {
+ 
+tijandX = tijandX + random(15) + random(-15)
+tijandY = tijandY + random(15) + random(-15)
+}; 
 
 /**
  * Updatet globale variabelen met positie van kogel of bal
@@ -396,6 +459,7 @@ function draw() {
     case SPELEN:
       beweegVijand();
       beweegFijand();
+      beweegTijand();
       beweegKogel();
       beweegSpeler();
       
@@ -412,6 +476,7 @@ function draw() {
       tekenVeld();
       tekenVijand(vijandX, vijandY);
       tekenFijand(fijandX, fijandY);
+      tekenTijand(tijandX, tijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
