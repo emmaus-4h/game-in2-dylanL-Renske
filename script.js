@@ -31,12 +31,12 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 350;   // x-positie van vijand
 var vijandY = 350;   // y-positie van vijand
 
-var fijandX = 400;   // x-positie van vijand
+var fijandX = 500;   // x-positie van vijand
 var fijandY = 400;   // y-positie van vijand
 
 
-var tijandX = 550;   // x-positie van vijand
-var tijandY = 550;   // y-positie van vijand
+var tijandX = 850;   // x-positie van vijand
+var tijandY = 200;   // y-positie van vijand
 
 
 
@@ -415,8 +415,15 @@ var checkGameOver = function() {
     
 
 
-//speler raakt rand scherm
-if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 20 && spelerY - vijandY > -20 && spelerX - vijandX < 20 && spelerX - vijandX > -20 )) {
+//speler raakt rand scherm en vijand 
+if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 25 && spelerY - vijandY > -25 && spelerX - vijandX < 25 && spelerX - vijandX > -25 ) 
+
+
+|| (spelerY - fijandY < 25 && spelerY - fijandY > -25 && spelerX - fijandX < 25 && spelerX - fijandX > -25 )
+
+|| (spelerY - tijandY < 25 && spelerY - tijandY > -25 && spelerX - tijandX < 25 && spelerX - tijandX > -25 )) 
+
+{
 
 spelerX = spelerX - 1000
 fill("#87CEFA");
