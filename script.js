@@ -34,10 +34,11 @@ var vijandY = 350;   // y-positie van vijand
 var fijandX = 500;   // x-positie van vijand
 var fijandY = 400;   // y-positie van vijand
 
-
 var tijandX = 850;   // x-positie van vijand
 var tijandY = 200;   // y-positie van vijand
 
+var rijandX = 80;   // x-positie van vijand
+var rijandY = 500;   // y-positie van vijand
 
 
 var score = 0; // aantal behaalde punten
@@ -55,7 +56,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("#DDA0DD"); 
+  fill("#e2b0ff"); 
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 
 fill("#8eee7f");
@@ -235,6 +236,60 @@ fill("pink")
 rect(x+15,y+10, 5,5)
 };
  
+var tekenRijand = function(x, y) {
+    
+//rij 1
+fill("red")
+rect(x,y, 5,5)
+rect(x+10,y, 5,5)
+rect(x+15,y, 5,5)
+rect(x+20,y, 5,5)
+rect(x+30,y, 5,5)
+
+//rij 2
+rect(x+5,y+5, 5,5)
+rect(x+25,y+5, 5,5)
+rect(x+15,y+5, 5,5)
+
+//rij 3
+rect(x+10,y+10, 5,5)
+rect(x+20,y+10, 5,5)
+
+//rij 4
+rect(x+10,y+15, 5,5)
+rect(x+5,y+15, 5,5)
+rect(x+15,y+15, 5,5)
+rect(x+20,y+15, 5,5)
+rect(x+25,y+15, 5,5)
+
+//rij 5
+rect(x,y+20, 5,5)
+rect(x+15,y+20, 5,5)
+rect(x+30,y+20, 5,5)
+
+//rij 6
+rect(x,y+25, 5,5)
+rect(x+10,y+25, 5,5)
+rect(x+20,y+25, 5,5)
+rect(x+30,y+25, 5,5)
+
+//rij 7
+rect(x+10,y+30, 5,5)
+rect(x+20,y+30, 5,5)
+
+//rij 8
+rect(x+10,y+35, 5,5)
+rect(x+20,y+35, 5,5)
+
+fill("white")
+rect(x+10,y+5, 5,5)
+rect(x+20,y+5, 5,5)
+  
+fill("pink") 
+rect(x+15,y+10, 5,5)
+};
+
+ 
 
 
 
@@ -338,6 +393,14 @@ tijandX = tijandX + random(15) + random(-15)
 tijandY = tijandY + random(15) + random(-15)
 }; 
 
+
+var beweegRijand = function() {
+ 
+rijandX = rijandX + random(15) + random(-15)
+rijandY = rijandY + random(15) + random(-15)
+}; 
+
+
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
@@ -421,8 +484,9 @@ if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(speler
 
 || (spelerY - fijandY < 25 && spelerY - fijandY > -25 && spelerX - fijandX < 25 && spelerX - fijandX > -25 )
 
-|| (spelerY - tijandY < 25 && spelerY - tijandY > -25 && spelerX - tijandX < 25 && spelerX - tijandX > -25 )) 
+|| (spelerY - tijandY < 25 && spelerY - tijandY > -25 && spelerX - tijandX < 25 && spelerX - tijandX > -25 )
 
+|| (spelerY - rijandY < 25 && spelerY - rijandY > -25 && spelerX - rijandX < 25 && spelerX - rijandX > -25 )) 
 {
 
 spelerX = spelerX - 1000
@@ -432,6 +496,10 @@ rect(20, 20, 1240, 680);
 fill("black");
 textSize(100);
 text('GAME OVER', 350, 400);
+
+fill("white");
+textSize(60);
+text('press reload to try again', 350, 550);
 
 }
   return false;
@@ -466,7 +534,7 @@ function draw() {
     case SPELEN:
       beweegVijand();
       beweegFijand();
-      beweegTijand();
+      beweegTijand(); beweegRijand();
       beweegKogel();
       beweegSpeler();
       
@@ -484,6 +552,7 @@ function draw() {
       tekenVijand(vijandX, vijandY);
       tekenFijand(fijandX, fijandY);
       tekenTijand(tijandX, tijandY);
+      tekenRijand(rijandX, rijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
