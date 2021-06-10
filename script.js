@@ -44,6 +44,8 @@ var rijandY = 500;   // y-positie van vijand
 var score = 0; // aantal behaalde punten
 
 
+//var schermscoreX = 400;   // x-positie van score
+//var schermscoreY = 400;   // y-positie van score
 
 
 
@@ -305,6 +307,9 @@ fill("yellow");
 ellipse(x+400, y+100, 18, 18)
 };
 
+/** teken scherm score */
+//var tekenSchermscore = function(x, y) {
+ //};
 
 /**
  * Tekent de speler
@@ -445,7 +450,11 @@ var beweegMunt = function() {
 
 };
 
+var score = function() {
 
+score = score + 1
+
+}; 
 
 /**
  * Zoekt uit of de vijand is geraakt
@@ -478,9 +487,11 @@ var checkGameOver = function() {
     
 
 
-//speler raakt rand scherm en vijand 
-if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) ||(spelerY - vijandY < 25 && spelerY - vijandY > -25 && spelerX - vijandX < 25 && spelerX - vijandX > -25 ) 
+//speler raakt rand scherm 
+if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) 
 
+//speler raakt vjand 
+||(spelerY - vijandY < 25 && spelerY - vijandY > -25 && spelerX - vijandX < 25 && spelerX - vijandX > -25 ) 
 
 || (spelerY - fijandY < 25 && spelerY - fijandY > -25 && spelerX - fijandX < 25 && spelerX - fijandX > -25 )
 
@@ -554,6 +565,7 @@ function draw() {
       tekenTijand(tijandX, tijandY);
       tekenRijand(rijandX, rijandY);
       tekenKogel(kogelX, kogelY);
+      //tekenschermscore(schermscoreX, schermscoreY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
