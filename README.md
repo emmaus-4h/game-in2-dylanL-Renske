@@ -14,7 +14,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] einde scherm aangeven
 - [x] teken vijand
 - [x] vijand laten bewegen
-- [ ] achtergrond maken
+- [x] achtergrond maken
+
 
 
 
@@ -29,7 +30,7 @@ Basis: uitleg, spelen, afgaan en punten
 
 - [ ] punten op scherm zetten
 - [ ] teken munten
-- [ ] punten kunnen scoren door het pakken van munten 
+- [ ] punten kunnen scoren door tijd
 - [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*

@@ -31,15 +31,17 @@ var kogelY = 0;    // y-positie van kogel
 var vijandX = 350;   // x-positie van vijand
 var vijandY = 350;   // y-positie van vijand
 
-var fijandX = 500;   // x-positie van vijand
-var fijandY = 400;   // y-positie van vijand
+var fijandX = 500;   // x-positie van vijand 2
+var fijandY = 400;   // y-positie van vijand 2
 
-var tijandX = 850;   // x-positie van vijand
-var tijandY = 200;   // y-positie van vijand
+var tijandX = 850;   // x-positie van vijand 3
+var tijandY = 200;   // y-positie van vijand 3
 
-var rijandX = 80;   // x-positie van vijand
-var rijandY = 500;   // y-positie van vijand
+var rijandX = 80;   // x-positie van vijand 4
+var rijandY = 500;   // y-positie van vijand 4
 
+var sijandX = 80;   // x-positie van vijand 5
+var sijandY = 500;   // y-positie van vijand 5
 
 var score = 0; // aantal behaalde punten
 
@@ -70,6 +72,13 @@ rect(50, 50, 250, 50);
 fill("#9f6060");
 rect(20, 640, 1240, 60);
 };
+
+
+//var tekenBeginscherm = function () {
+  
+ // if (keyIsDown(RIGHT_ARROW))
+
+//};
 
 //width - 2 * 20, height - 2 *20
 /**
@@ -130,6 +139,9 @@ fill("pink")
 rect(x+15,y+10, 5,5)
 };
  
+var tekensijand = function(x, y) {
+tekensijand = tekenVijand   
+}; 
 
 var tekenFijand = function(x, y) {
     
@@ -307,9 +319,6 @@ fill("yellow");
 ellipse(x+400, y+100, 18, 18)
 };
 
-/** teken scherm score */
-//var tekenSchermscore = function(x, y) {
- //};
 
 /**
  * Tekent de speler
@@ -413,6 +422,26 @@ var beweegKogel = function() {
 
 };
 
+var checkvijand = function() {
+//vijand raakt rand scherm 
+if (vijandX < 21 || vijandY < 21 || vijandX > 1219 || vijandY > 659
+  || fijandX < 21 || fijandY < 21 || fijandX > 1219 || fijandY > 659
+  || tijandX < 21 || tijandY < 21 || tijandX > 1219 || tijandY > 659
+  || rijandX < 21 || rijandY < 21 || rijandX > 1219 || rijandY > 659 ) 
+{
+ vijandX = random(200,500)
+ vijandY = random(200,1100)
+ fijandX = random(200,1100)
+ fijandY = random(100,550)
+ tijandX = random(200,1100)
+ tijandY = random(100,550)
+ rijandX = random(200,1100)
+ rijandY = random(100,550);
+ 
+}
+  return false;
+};
+
 
 /**
  * Kijkt wat de toetsen/muis etc zijn.
@@ -450,11 +479,6 @@ var beweegMunt = function() {
 
 };
 
-var score = function() {
-
-score = score + 1
-
-}; 
 
 /**
  * Zoekt uit of de vijand is geraakt
@@ -548,7 +572,8 @@ function draw() {
       beweegTijand(); beweegRijand();
       beweegKogel();
       beweegSpeler();
-      
+      checkvijand();
+
       if (checkVijandGeraakt()) {
         // punten erbij
         // nieuwe vijand maken
@@ -560,12 +585,13 @@ function draw() {
       }
 
       tekenVeld();
+      
       tekenVijand(vijandX, vijandY);
       tekenFijand(fijandX, fijandY);
       tekenTijand(tijandX, tijandY);
       tekenRijand(rijandX, rijandY);
+      tekensijand(sijandX, sijandY);
       tekenKogel(kogelX, kogelY);
-      //tekenschermscore(schermscoreX, schermscoreY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
