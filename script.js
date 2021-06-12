@@ -43,8 +43,14 @@ var rijandY = 500;   // y-positie van vijand 4
 var sijandX = 80;   // x-positie van vijand 5
 var sijandY = 500;   // y-positie van vijand 5
 
-var lijandX = 80;   // x-positie van vijand 5
-var lijandY = 500;   // y-positie van vijand 5
+var lijandX = 80;   // x-positie van vijand 6
+var lijandY = 500;   // y-positie van vijand 6
+
+var mijandX = 80;   // x-positie van vijand 7
+var mijandY = 500;   // y-positie van vijand 7
+
+var pijandX = 80;   // x-positie van vijand 8
+var pijandY = 500;   // y-positie van vijand 8
 
 var score = 0; // aantal behaalde punten
 
@@ -68,8 +74,8 @@ var tekenVeld = function () {
 fill("#8eee7f");
 rect(20, 620, 1240, 75);
 
-fill("white");
-rect(50, 50, 250, 50);
+//fill("white");
+//rect(50, 50, 250, 50);
 
 fill("#9f6060");
 rect(20, 640, 1240, 60);
@@ -147,6 +153,14 @@ tekensijand = tekenVijand
 
 var tekenlijand = function(x, y) {
 tekenlijand = tekenVijand   
+}; 
+
+var tekenmijand = function(x, y) {
+tekenmijand = tekenlijand   
+}; 
+
+var tekenpijand = function(x, y) {
+tekenpijand = tekenmijand   
 }; 
 
 var tekenFijand = function(x, y) {
@@ -422,15 +436,28 @@ rijandY = rijandY + random(15) + random(-15)
 
 var beweegSijand = function() {
  
-sijandX = sijandX + random(15) 
+sijandX = sijandX + random(4) 
 sijandY = sijandY 
 }; 
 
 var beweegLijand = function() {
  
 lijandX = lijandX  
-lijandY = lijandY + random(15)
+lijandY = lijandY + random(2)
 }; 
+
+var beweegMijand = function() {
+ 
+mijandX = mijandX + 3
+mijandY = mijandY 
+}; 
+
+var beweegPijand = function() {
+ 
+pijandX = pijandX  
+pijandY = pijandY + 3
+}; 
+
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
@@ -443,20 +470,27 @@ var checkvijand = function() {
 if (vijandX < 21 || vijandY < 21 || vijandX > 1219 || vijandY > 659
   || fijandX < 21 || fijandY < 21 || fijandX > 1219 || fijandY > 659
   || tijandX < 21 || tijandY < 21 || tijandX > 1219 || tijandY > 659
-  || rijandX < 21 || rijandY < 21 || rijandX > 1219 || rijandY > 659 ) 
+  || rijandX < 21 || rijandY < 21 || rijandX > 1219 || rijandY > 659 
+ || lijandX < 21 || lijandY < 21 || lijandX > 1219 || lijandY > 659
+  ) 
 {
- vijandX = random(200,500)
- vijandY = random(200,1100)
+ vijandX = random(200,1100)
+ vijandY = random(100,500)
  fijandX = random(200,1100)
  fijandY = random(100,550)
  tijandX = random(200,1100)
  tijandY = random(100,550)
  rijandX = random(200,1100)
  rijandY = random(100,550);
- sijandX = random(100,20)
- sijandY = random(50,650);
- lijandX = random(30,600)
+ sijandX = random(50,100);
+ sijandY = random(50,600);
+ lijandX = random(30,1100);
  lijandY = random(25,30);
+ mijandX = random(200,500);
+ mijandY = random(450,500);
+ pijandX = random(50,1100);
+ pijandY = random(25,50);
+
 }
   return false;
 };
@@ -533,7 +567,7 @@ var checkGameOver = function() {
 //speler raakt rand scherm 
 if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 ) 
 
-//speler raakt vjand 
+//speler raakt vijand 
 ||(spelerY - vijandY < 25 && spelerY - vijandY > -25 && spelerX - vijandX < 25 && spelerX - vijandX > -25 ) 
 
 || (spelerY - fijandY < 25 && spelerY - fijandY > -25 && spelerX - fijandX < 25 && spelerX - fijandX > -25 )
@@ -545,7 +579,13 @@ if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 )
 || (spelerY - sijandY < 25 && spelerY - sijandY > -25 && spelerX - sijandX < 25 && spelerX - sijandX > -25 )
 
 || (spelerY - lijandY < 25 && spelerY - lijandY > -25 && spelerX - lijandX < 25 && spelerX - lijandX > -25 )
-) 
+
+|| (spelerY - mijandY < 25 && spelerY - mijandY > -25 && spelerX - mijandX < 25 && spelerX - mijandX > -25 )
+
+|| (spelerY - pijandY < 25 && spelerY - pijandY > -25 && spelerX - pijandX < 25 && spelerX - pijandX > -25 )
+
+
+)
 {
 
 spelerX = spelerX - 2000
@@ -606,6 +646,8 @@ function draw() {
       beweegSpeler();
       beweegSijand();
       beweegLijand();
+      beweegMijand();
+      beweegPijand();
       checkvijand();
 
       if (checkVijandGeraakt()) {
@@ -626,6 +668,8 @@ function draw() {
       tekenRijand(rijandX, rijandY);
       tekensijand(sijandX, sijandY);
       tekenlijand(lijandX, lijandY);
+      tekenmijand(mijandX, mijandY);  
+      tekenpijand(pijandX, pijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
