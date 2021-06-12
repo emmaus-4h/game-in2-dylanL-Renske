@@ -11,35 +11,31 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
 - [x] teken speler
 - [x] beweeg speler ( links, rechts, omhoog, omlaag )
-- [x] einde scherm aangeven
+
 - [x] teken vijand
-- [x] vijand laten bewegen
+- [x] meerdere vijanden tekenen
+- [x] vijanden laten bewegen
+- [x] zorgen dat vijanden in scherm blijven
+
 - [x] achtergrond maken
+- [ ] startscherm / uitlegscherm maken
+- [ ] game over scherm maken
 
+- [x] einde scherm aangeven
+- [x] game over door einde scherm te raken
+- [x] game over door vijand te raken
 
-
-
-
-- [ ] teken grond (waar je wel op kunt staan)
-- [ ] dat bepaalde punt tekenen als bijvoorbeeld fisish
-- [ ] game gewonnen als eindpunt gehaald
-- [ ] game over na 60 seconden
-- [ ] level gewonnen als je einde haald ( bepaald punt )
-
-
-
-- [ ] punten op scherm zetten
-- [ ] teken munten
 - [ ] punten kunnen scoren door tijd
-- [ ] uitlegscherm
+- [ ] punten op game over scherm laten zien
+
+
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
-- [ ] tegenstanders in de vorm van poppetjes (of)
-- [ ] tegenstanders in de vorm van obstekels
-- [ ] game over als speler vijand raakt
+- [x] tegenstanders in de vorm van poppetjes (of)
+- [x] game over als speler vijand raakt
 
 Uitbreiding: *bedenk iets, bijvoorbeeld bewegende achtergrond*
-- [ ] teken extra voorwerpen die bij ons thema passen
+- [ ] teken extra voorwerpen die bij thema passen
 - [ ] bewegende achtergrond
 - [ ] *later uitwerken*
 
