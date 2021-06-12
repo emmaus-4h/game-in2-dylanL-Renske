@@ -43,6 +43,9 @@ var rijandY = 500;   // y-positie van vijand 4
 var sijandX = 80;   // x-positie van vijand 5
 var sijandY = 500;   // y-positie van vijand 5
 
+var lijandX = 80;   // x-positie van vijand 5
+var lijandY = 500;   // y-positie van vijand 5
+
 var score = 0; // aantal behaalde punten
 
 
@@ -54,7 +57,6 @@ var score = 0; // aantal behaalde punten
 /* ********************************************* */
 /*      functies die je gebruikt in je game      */
 /* ********************************************* */
-
 
 /**
  * Tekent het speelveld
@@ -141,6 +143,10 @@ rect(x+15,y+10, 5,5)
  
 var tekensijand = function(x, y) {
 tekensijand = tekenVijand   
+}; 
+
+var tekenlijand = function(x, y) {
+tekenlijand = tekenVijand   
 }; 
 
 var tekenFijand = function(x, y) {
@@ -414,7 +420,17 @@ rijandX = rijandX + random(15) + random(-15)
 rijandY = rijandY + random(15) + random(-15)
 }; 
 
+var beweegSijand = function() {
+ 
+sijandX = sijandX + random(15) 
+sijandY = sijandY 
+}; 
 
+var beweegLijand = function() {
+ 
+lijandX = lijandX  
+lijandY = lijandY + random(15)
+}; 
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
@@ -423,7 +439,7 @@ var beweegKogel = function() {
 };
 
 var checkvijand = function() {
-//vijand raakt rand scherm 
+//vijand raakt rand scherm en gaat op nieuwe posities staan
 if (vijandX < 21 || vijandY < 21 || vijandX > 1219 || vijandY > 659
   || fijandX < 21 || fijandY < 21 || fijandX > 1219 || fijandY > 659
   || tijandX < 21 || tijandY < 21 || tijandX > 1219 || tijandY > 659
@@ -437,7 +453,10 @@ if (vijandX < 21 || vijandY < 21 || vijandX > 1219 || vijandY > 659
  tijandY = random(100,550)
  rijandX = random(200,1100)
  rijandY = random(100,550);
- 
+ sijandX = random(100,20)
+ sijandY = random(50,650);
+ lijandX = random(30,600)
+ lijandY = random(25,30);
 }
   return false;
 };
@@ -521,21 +540,33 @@ if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 )
 
 || (spelerY - tijandY < 25 && spelerY - tijandY > -25 && spelerX - tijandX < 25 && spelerX - tijandX > -25 )
 
-|| (spelerY - rijandY < 25 && spelerY - rijandY > -25 && spelerX - rijandX < 25 && spelerX - rijandX > -25 )) 
+|| (spelerY - rijandY < 25 && spelerY - rijandY > -25 && spelerX - rijandX < 25 && spelerX - rijandX > -25 )
+
+|| (spelerY - sijandY < 25 && spelerY - sijandY > -25 && spelerX - sijandX < 25 && spelerX - sijandX > -25 )
+
+|| (spelerY - lijandY < 25 && spelerY - lijandY > -25 && spelerX - lijandX < 25 && spelerX - lijandX > -25 )
+) 
 {
 
-spelerX = spelerX - 1000
+spelerX = spelerX - 2000
 fill("#87CEFA");
 rect(20, 20, 1240, 680);
 
 fill("black");
+textSize(40);
+text('ontwijk de vijanden', 50, 300);
+text('raakt een vijand jou, dan is het game over', 50, 350);text('beweeg jouw speler met de cursor toets', 50, 400);
+text('raak jij een zijkant van het scherm is het game over', 50, 450);
+text('raakt een vijand een zijkant van het scherm krijgen', 50, 500);
+text('alle vijanden een nieuwe positie', 50, 550);
+fill("black");
 textSize(100);
-text('GAME OVER', 350, 400);
+text('GAME OVER', 50, 120);
 
 fill("white");
-textSize(60);
-text('press reload to try again', 350, 550);
-
+textSize(55);
+text('klik op refresh om opnieuw te spelen', 50, 650);
+text('Catch Me If You Can !!', 50, 220);
 }
   return false;
 };
@@ -569,9 +600,12 @@ function draw() {
     case SPELEN:
       beweegVijand();
       beweegFijand();
-      beweegTijand(); beweegRijand();
+      beweegTijand(); 
+      beweegRijand();
       beweegKogel();
       beweegSpeler();
+      beweegSijand();
+      beweegLijand();
       checkvijand();
 
       if (checkVijandGeraakt()) {
@@ -591,6 +625,7 @@ function draw() {
       tekenTijand(tijandX, tijandY);
       tekenRijand(rijandX, rijandY);
       tekensijand(sijandX, sijandY);
+      tekenlijand(lijandX, lijandY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 

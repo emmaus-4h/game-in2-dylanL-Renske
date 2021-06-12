@@ -1,8 +1,8 @@
 Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
-## Mijn spel: *naam van het spel*
+## Mijn spel: *catch me if you can*
 Gemaakt door:
-- *Renske Hartman*
+- *Renske Hartman 4HF*
 - *Dylan van der leij*
 
 ## Mijn planning
