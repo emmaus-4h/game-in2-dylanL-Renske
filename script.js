@@ -74,19 +74,11 @@ var tekenVeld = function () {
 fill("#8eee7f");
 rect(20, 620, 1240, 75);
 
-//fill("white");
-//rect(50, 50, 250, 50);
-
 fill("#9f6060");
 rect(20, 640, 1240, 60);
 };
 
 
-//var tekenBeginscherm = function () {
-  
- // if (keyIsDown(RIGHT_ARROW))
-
-//};
 
 //width - 2 * 20, height - 2 *20
 /**
@@ -333,10 +325,8 @@ rect(x+15,y+10, 5,5)
  * @param {number} y y-coördinaat
  */
 var tekenKogel = function(x, y) {
-fill("yellow");
-  ellipse(x+400, y+100, 30, 30);
-  fill("yellow")
-ellipse(x+400, y+100, 18, 18)
+
+
 };
 
 
@@ -397,9 +387,6 @@ rect(x+20,y+5, 5,5)
 fill("pink") 
 rect(x+15,y+10, 5,5)
 };
-
-
-//startscherm
 
 
 
@@ -582,11 +569,10 @@ if ((spelerX < 21 || spelerY < 21 || spelerX > 1219 || spelerY > 659 )
 
 || (spelerY - mijandY < 25 && spelerY - mijandY > -25 && spelerX - mijandX < 25 && spelerX - mijandX > -25 )
 
-|| (spelerY - pijandY < 25 && spelerY - pijandY > -25 && spelerX - pijandX < 25 && spelerX - pijandX > -25 )
+|| (spelerY - pijandY < 25 && spelerY - pijandY > -25 && spelerX - pijandX < 25 && spelerX - pijandX > -25 ))
 
-
-)
 {
+
 
 spelerX = spelerX - 2000
 fill("#87CEFA");
@@ -670,7 +656,6 @@ function draw() {
       tekenlijand(lijandX, lijandY);
       tekenmijand(mijandX, mijandY);  
       tekenpijand(pijandX, pijandY);
-      tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
