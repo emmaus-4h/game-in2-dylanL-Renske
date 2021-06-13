@@ -18,8 +18,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] zorgen dat vijanden in scherm blijven
 
 - [x] achtergrond maken
-- [ ] startscherm / uitlegscherm maken
-- [ ] game over scherm maken
+- [x] startscherm / uitlegscherm maken
+- [x] game over scherm maken
 
 - [x] einde scherm aangeven
 - [x] game over door einde scherm te raken
